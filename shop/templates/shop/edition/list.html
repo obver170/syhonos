@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title%}
+    Список книг
+{% endblock %}
+
+{% block content %}
+    {% for edition in editions %}
+        <div class="item">
+            <a href="{{edition.get_absolute_url}}">
+                <img src='{% if edition.photo %} {{edition.photo.url}} {% else %}{% static "img/no_image.png" %}{% endif %}'>
+            </a>
+            <a href="{{ edition.get_absolute_url }}">  {{edition.book}}</a>
+            <br>
+            {{ edition.price }}
+        </div>
+        <p> ------------------------------------------------ </p>
+    {% endfor %}
+{% endblock %}

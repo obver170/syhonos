@@ -1,0 +1,30 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ edition.book }}
+{% endblock %}
+
+{% block content %}
+    <div class="product-detail">
+        <img src='{% if edition.photo %} {{edition.photo.url}} {% else %}{% static "img/no_image.png" %}{% endif %}'>
+        <h1> {{edition.book}} </h1>
+        <h2>
+            {{edition.book.genre}}
+        </h2>
+        <p class="price"> {{edition.price}} </p>
+        {{ edition.book.description|linebreaks }}
+        <h3> Полное описание </h3>
+        <p>
+            Вес: {{edition.weight}}
+            <br>
+            Высота: {{edition.height}}
+            <br>
+            Ширина: {{edition.width}}
+            <br>
+            Количество страниц: {{edition.numberOfPages}}
+            <br>
+            Год издания: {{edition.yearOfIssue}}
+        </p>
+    </div>
+{% endblock %}
