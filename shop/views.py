@@ -6,8 +6,9 @@ from .models import Edition
 
 def edition_list(request):
     editions = Edition.objects.all()
+
     context = {
-        'editions': editions
+        'editions': editions,
     }
     return render(request, 'shop/edition/list.html', context)
 
