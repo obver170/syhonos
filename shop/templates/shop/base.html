@@ -1,23 +1,734 @@
 {% load static %}
 <!DOCTYPE html>
 
+<html lang="ru">
 
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title> {% block title %} Сухонос {% endblock %}</title>
-        <link href="{% static 'css/base.css' %}" rel="stylesheet">
-    </head>
-    <body>
-        <div id="header">
-            <a href="/" class="logo"> Магазин Сухонос </a>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Юрий Сухонос</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bell - v2.2.1
+  * Template URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section class="hero">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <a class="hero-brand" href="{% url 'shop:edition_list' %}" title="Home"><img alt="Syhonos Logo" src="{% static 'assets/img/logo.png' %}"></a>
         </div>
-    <div id="subheader">
-        <div class="cart"> Ваша корзина пуста </div>
+      </div>
+
+      <div class="col-md-12">
+        <h1>
+          Юрий Сухонос
+        </h1>
+
+        <p class="tagline">
+          Детский автор, доктор медицинских наук - Юрий Сухонос
+        </p>
+        <a class="btn btn-full scrollto" href="#about">Узнать больше</a>
+      </div>
     </div>
-    <div id="content">
-        {% block content %} {% endblock %}
+
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="{% url 'shop:edition_list' %}"><img src="{% static 'assets/img/logo-nav.png' %}" alt=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#about">Об авторе</a></li>
+          <li><a href="#portfolio">Книги</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#contact">Связь</a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+
+      <nav class="nav social-nav pull-right d-none d-lg-inline">
+        <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+      </nav>
     </div>
-    </body>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section class="about" id="about">
+
+      <div class="container text-center">
+        <h2>
+          Об авторе
+        </h2>
+
+        <p>
+          Юрий Анатольевич Сухонос, доктор медицинских наук, военный врач, действительный государственный советник 2-го класса
+          <br>
+
+        Я доктор медицинских наук, подполковник запаса. Преподавал в Военно-медицинской академии, там же написал
+            докторскую диссертацию. Большая плеяда учеников. На Чукотке я возглавлял здравоохранение, это уникальный
+            регион, один из самых отдалённых в Российской Федерации.
+          </p>
+         <h4>Три качества настоящего врача.</h4>
+        <p>
+          Это должен быть грамотный доктор, он должен быть книгочеем. Тот доктор, на знания которого можно опереться.
+          Второе — умение. Доктор должен уметь применить себя и свои знания в отношении лечения того или иного больного.
+          И, конечно, доброта. Доброе сердце. Золотая голова, золотые руки и золотое сердце. </p>
+
+
+        <div class="row stats-row">
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">1</span>Ученая степень
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">9</span> Написано книг
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">25</span> Количество патентов
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">90170</span> Благодарные пациенты
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Welcome Section ======= -->
+    <section class="welcome text-center">
+      <h2>Добро пожаловать</h2>
+      <p>
+        На личную страницу Юрия Анатольвича Сухоноса, детского психолога и автора книг.
+      </p>
+      <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="{% static 'assets/img/gadgets.png' %}">
+    </section><!-- End Welcome Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features" id="features">
+
+      <div class="container">
+        <h2 class="text-center">
+          Особенности книг
+        </h2>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-rocket"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 1
+                </h3>
+
+                <p>
+                  Описание преимущества 1
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-envelope"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 2
+                </h3>
+
+                <p>
+                  Описание преимущества 2
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-bell"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 3
+                </h3>
+
+                <p>
+                  Описание преимущества 3
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-database"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 4
+                </h3>
+
+                <p>
+                  Описание преимущества 4
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-cutlery"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 5
+                </h3>
+
+                <p>
+                  Описание преимущества 5
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="card card-block text-center">
+              <div>
+                <div class="feature-icon">
+                  <span class="fa fa-dashboard"></span>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Преимущество 6
+                </h3>
+                <p>
+                  Описание преимущества 6
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Features Section -->
+
+    <!-- ======= Call to Action Section ======= -->
+    <section class="cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+            <h2>
+              МИБС о Юрии Сухоносе
+            </h2>
+
+            <p>
+              Юрий Сухонос – поэт особенный: вся его жизнь тесно связана с медициной. Он доктор медицинских наук,
+              подполковник медицинской службы запаса, действительный государственный советник 2-го класса.
+              Юрий Анатольевич, много лет преподававший в Военно-медицинской академии, а затем возглавлявший
+              здравоохранение Чукотки, сейчас является председателем Ассоциации специалистов и организаций медицинской
+              сферы деятельности «Серебряный крест».
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+            <a class="btn btn-ghost" href="#contact_form">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Call to Action Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section class="portfolio" id="portfolio">
+
+      <div class="container text-center">
+        <h2>
+          Книги
+        </h2>
+
+        <p>
+          Идея писать стихи пришла ко мне, когда зачитывал книги детям, видел их радость и улыбку.
+          В том числе у больных детей это вызывало улыбку, ощущение счастья, ощущение того, что все заболевания уйдут
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-1.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-1.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Веселая Арена
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста.Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня Веселая Арена - посвящена 100 летию Цирка! Басня даст возможность ребёнку улыбнутся и посмеяться, а так де расскажет всего животных в цирке! Пояснит ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-2.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-2.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Было-не было
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста.Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня Было Не-Было - даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-3.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-3.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Конкурс чтецов
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста.Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня Конкурс Чтецов - даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-4.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-4.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Конкурс танцоров
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста.Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня Конкурс танцоров - даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-5.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-5.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Котик-Куманек да Кумушка-Лисичка
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста. Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-6.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-6.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Маковое зернышко
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста. Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-7.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-7.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Ручеёк
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста. Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+              <a href="{% static 'assets/img/porf-8.jpg' %}" class="venobox" data-gall="portfolioGallery"><img alt="" src="{% static 'assets/img/porf-8.jpg' %}">
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      Рыжий лис
+                    </h3>
+
+                    <p class="card-text">
+                      Книга для родителей и детей дошкольного и младшего школьного возраста. Потрясающая детская басня, которая будет отличным помощником мамам и папам, бабушкам и дедушкам. Басня даст возможность ребёнку улыбнутся и посмеяться, а так же научит не боятся и не стесняться своих изъянов! Расскажет ребёнку об индивидуальности каждого человека на примере животных из книги.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section class="team" id="team">
+      <div class="container">
+        <h2 class="text-center">
+          Моя команда
+        </h2>
+
+        <div class="row">
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block">
+              <a href="#"><img alt="" class="team-img" src="{% static 'assets/img/team-1.jpg' %}">
+                <div class="card-title-wrap">
+                  <span class="card-title">Сергей Фалых</span> <span class="card-text">Арт директор</span>
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">
+                    Свяжись со мной
+                  </h4>
+
+                  <nav class="social-nav">
+                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    Текст про арт директора
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block">
+              <a href="#"><img alt="" class="team-img" src="{% static 'assets/img/team-2.jpg' %}">
+                <div class="card-title-wrap">
+                  <span class="card-title">Анна Налимова</span> <span class="card-text">Дизайнер</span>
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">
+                    Свяжись со мной
+                  </h4>
+
+                  <nav class="social-nav">
+                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    Текст про дизайнера
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block">
+              <a href="#"><img alt="" class="team-img" src="{% static 'assets/img/team-3.jpg' %}">
+                <div class="card-title-wrap">
+                  <span class="card-title">Леонид Лапин</span> <span class="card-text">Редактор</span>
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">
+                    Свяжись со мной
+                  </h4>
+
+                  <nav class="social-nav">
+                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    Текст про редактора
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block">
+              <a href="#"><img alt="" class="team-img" src="{% static 'assets/img/team-4.jpg' %}">
+                <div class="card-title-wrap">
+                  <span class="card-title">София Марьина</span> <span class="card-text">Корректор</span>
+                </div>
+
+                <div class="team-over">
+                  <h4 class="hidden-md-down">
+                    Свяжись со мной
+                  </h4>
+
+                  <nav class="social-nav">
+                    <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+                  </nav>
+
+                  <p>
+                    Информация про корректора
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="section-title">Обратная связь</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Невский проспект 45 <br>Ленинград, 156400</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>u@syhonos.site</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+7 931 000 70 00</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8"><a name="contact_form"></a>
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, заполните поле. Минимум 4 символа" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" data-rule="email" data-msg="Пожалуйста, введите верный email" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема" data-rule="minlen:4" data-msg="Пожалуйста, заполните поле. Минимум 8 символа" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Пожалуйста, заполните поле." placeholder="Сообщение"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="loading">Загрузка</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Ваше сообщение получено. Спасибо!</div>
+                </div>
+                <div class="text-center"><button type="submit">Отправить сообщение</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="site-footer">
+    <div class="bottom">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12 text-lg-left text-center">
+            <p class="copyright-text">
+              &copy; <strong>Ю. Сухонос </strong>. Все права защищены
+            </p>
+            <div class="credits">
+              <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+            -->
+
+              Designed by <a href="https://doc-online.site">bar170</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="{% url 'shop:edition_list' %}">Наверх</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#about">Об авторе</a>
+              </li>
+
+
+              <li class="list-inline-item">
+                <a href="#portfolio">Книги</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#team">Команда</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#contact">Связь</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/tether/js/tether.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/lockfixed/jquery.lockfixed.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/hoverIntent/hoverIntent.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
 
 </html>
