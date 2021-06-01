@@ -2,3 +2,6 @@ db.sqlite3
 shop/migrations/
 media/
 shop/__pycache__/*
+shop/__pycache__/urls.cpython-38.pyc
+shop/__pycache__/views.cpython-38.pyc
+
