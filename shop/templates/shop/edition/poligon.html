@@ -1,0 +1,37 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title%}
+    Юрий Сухонос
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    {% for edition in editions %}
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+
+              <a href="{{edition.photo.url}}" class="venobox" data-gall="portfolioGallery">
+                <img alt="" src='{% if edition.photo %} {{edition.photo.url}} {% else %}{% static "img/no_image.png" %}{% endif %}'>
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      {{edition.book}}
+                    </h3>
+
+                    <p class="card-text">
+                      {{ edition.book.description }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+
+
+        {% endfor %}
+</div>
+
+{% endblock %}

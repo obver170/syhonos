@@ -1,0 +1,97 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block title%}
+    Юрий Сухонос
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    {% for edition in editions %}
+
+          <div class="col-lg-3 col-sm-6 col-xs-12">
+            <div class="card card-block">
+
+              <a href="{{edition.photo.url}}" class="venobox" data-gall="portfolioGallery">
+                <img alt="" src='{% if edition.photo %} {{edition.photo.url}} {% else %}{% static "img/no_image.png" %}{% endif %}'>
+                <div class="portfolio-over">
+                  <div>
+                    <h3 class="card-title">
+                      {{edition.book}}
+                    </h3>
+
+                    <p class="card-text">
+                      {{ edition.book.description }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+
+
+        {% endfor %}
+</div>
+
+
+<div class="row justify-content-center">
+    {% for slides in set_book %}
+        {% for slide in slides %}
+            {{slide}}
+        {% endfor %}
+    <br>
+    {% endfor %}
+
+
+</div>
+
+<div id="books" class="carousel slide" data-ride="carousel">
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+          <div class="carousel-item active"></div>
+          {% for slides in set_book %}
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    {% for slide in slides %}
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <div class="card card-block">
+
+                              <a href="{{slide.photo.url}}" class="venobox" data-gall="portfolioGallery">
+                                <img alt="" src='{% if slide.photo %} {{slide.photo.url}} {% else %}{% static "img/no_image.png" %}{% endif %}'>
+                                <div class="portfolio-over">
+                                  <div>
+                                    <h3 class="card-title">
+                                      {{slide.book}}
+                                    </h3>
+
+                                    <p class="card-text">
+                                      {{ slide.book.description }}
+                                    </p>
+                                  </div>
+                                </div>
+                              </a>
+                              </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+          {% endfor %}
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#books" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#books" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+</div>
+
+<p>Какая-то хрень</p>
+
+
+{% endblock %}
