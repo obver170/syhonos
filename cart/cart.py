@@ -1,6 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
-from shop_syhonos.shop.models import Edition
+from ..shop.models import Edition
 
 
 class Cart(object):
