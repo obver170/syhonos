@@ -3,13 +3,12 @@ import math
 from django.shortcuts import render, get_object_or_404
 from .models import Edition
 from django.core.paginator import Paginator
-
+from cart.forms import CartAddEditionForm
 
 # Create your views here.
 
 def edition_list(request):
     editions = Edition.objects.all()
-
     context = {
         'editions': editions,
     }

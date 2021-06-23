@@ -1,0 +1,53 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+Ваша корзина покупок
+{% endblock %}
+
+{% block content %}
+
+<h1>Ваша корзина покупок</h1>
+
+<table class="cart">
+    <thead>
+        <tr>
+            <th>Изображение</th>
+            <th>Книга</th>
+            <th>Количество</th>
+            <th>Удалить</th>
+            <th>Цена за еденицу</th>
+            <th>Общая стоимость</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart %}
+            {% with edition=item.edition %}
+            <tr>
+                <td>
+                    <a href="{{ edition.get_absolute_url }}">
+                        <img src="{{ edition.image.url }}">
+                    </a>
+                </td>
+                <td>{{ edition.book }}</td>
+                <td>{{ item.quantity }}</td>
+                <td><a href='{% url "cart:cart_remove" edition.id %}'>Удалить</a></td>
+                <td class="num">{{ item.price }}</td>
+                <td class="num">{{ item.total_price }}</td>
+            </tr>
+            {% endwith %}
+        {% endfor %}
+    <tr class="total">
+        <td>Стоимость корзины</td>
+        <td colspan="4"></td>
+        <td class="num">{{ cart.get_total_price }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<p class="text-right">
+    <a href="{% url 'shop:edition_list' %}" class="button light">Продолжение покупок</a>
+    <a href="#" class="button">Проверить</a>
+</p>
+
+{% endblock %}
